@@ -11,7 +11,7 @@ My_Subscriber() : Node("my_subscriber_node"){
 private:
  void topic_callback(const geometry_msgs::msg::PoseStamped::SharedPtr msg) const {
         RCLCPP_INFO(this->get_logger(), "我收到了: x='%f'", msg->pose.position.x);
-        RCLCPP_INFO(this->get_logger(), "y='%f'\nYes", msg->pose.position.y);
+        RCLCPP_INFO(this->get_logger(), "y='%f'", msg->pose.position.y);
     }
      rclcpp::Subscription<geometry_msgs::msg::PoseStamped>::SharedPtr subscriber_;
 };
